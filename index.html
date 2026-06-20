@@ -171,6 +171,21 @@ section{padding:64px 0}
 .price-banner .amt span{font-size:1.5rem;font-weight:400;vertical-align:super;margin-right:2px}
 .price-banner p{opacity:.85;margin-top:6px;letter-spacing:.04em}
 
+/* ---------- GALLERY ---------- */
+.gallery-sec{background:var(--cream-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.gallery-grid{column-count:3;column-gap:14px}
+.gallery-grid figure{break-inside:avoid;margin:0 0 14px;border-radius:14px;overflow:hidden;
+  position:relative;box-shadow:0 10px 24px -16px rgba(28,61,43,.5);background:#e9e2d4}
+.gallery-grid img,.gallery-grid video{display:block;width:100%;height:auto;object-fit:cover;
+  transition:transform .5s ease}
+.gallery-grid figure:hover img,.gallery-grid figure:hover video{transform:scale(1.04)}
+.gallery-grid .vbadge{position:absolute;top:10px;left:10px;z-index:2;
+  background:rgba(28,61,43,.78);color:#fdf8ef;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;
+  padding:4px 9px;border-radius:20px;display:flex;align-items:center;gap:5px}
+.gallery-grid .vbadge svg{width:11px;height:11px}
+@media(max-width:900px){.gallery-grid{column-count:2}}
+@media(max-width:520px){.gallery-grid{column-count:1}}
+
 /* ---------- IMPORTANT NOTICE ---------- */
 .notice-sec{padding:28px 0 16px}
 .notice{
@@ -462,6 +477,37 @@ section{padding:64px 0}
 
     <div style="text-align:center;margin-top:34px">
       <a class="cta alt" href="https://forms.gle/hFjay1djVHUVMVKP9" target="_blank" rel="noopener">Rezervo vendin tënd</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section class="gallery-sec">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Vendi</span>
+      <h2>Brezovicë, Kosovë</h2>
+      <p>Natyra dhe ambienti ku zhvillohet retreat-i</p>
+    </div>
+    <div class="gallery-grid">
+      <figure>
+        <span class="vbadge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Video</span>
+        <video autoplay muted loop playsinline preload="metadata"><source src="assets/gallery/video-1.mp4" type="video/mp4"></video>
+      </figure>
+      <figure><img src="assets/gallery/image-1.png" alt="Vendi i retreat-it, Brezovicë" loading="lazy"></figure>
+      <figure><img src="assets/gallery/image-2.jpg" alt="Ambienti i retreat-it" loading="lazy"></figure>
+      <figure>
+        <span class="vbadge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Video</span>
+        <video autoplay muted loop playsinline preload="metadata"><source src="assets/gallery/video-2.mp4" type="video/mp4"></video>
+      </figure>
+      <figure><img src="assets/gallery/image-3.jpg" alt="Natyra në Brezovicë" loading="lazy"></figure>
+      <figure><img src="assets/gallery/image-4.jpg" alt="Vila e akomodimit" loading="lazy"></figure>
+      <figure>
+        <span class="vbadge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Video</span>
+        <video autoplay muted loop playsinline preload="metadata"><source src="assets/gallery/video-3.mp4" type="video/mp4"></video>
+      </figure>
+      <figure><img src="assets/gallery/image-5.jpg" alt="Pamje nga vendi" loading="lazy"></figure>
+      <figure><img src="assets/gallery/image-6.jpg" alt="Ambienti natyror" loading="lazy"></figure>
     </div>
   </div>
 </section>
