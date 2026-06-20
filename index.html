@@ -171,6 +171,26 @@ section{padding:64px 0}
 .price-banner .amt span{font-size:1.5rem;font-weight:400;vertical-align:super;margin-right:2px}
 .price-banner p{opacity:.85;margin-top:6px;letter-spacing:.04em}
 
+/* ---------- IMPORTANT NOTICE ---------- */
+.notice-sec{padding:28px 0 16px}
+.notice{
+  display:flex;gap:18px;align-items:flex-start;max-width:840px;margin:0 auto;
+  background:rgba(163,104,60,.08);border:1px solid var(--line);border-left:5px solid var(--terracotta);
+  border-radius:16px;padding:32px 36px;
+}
+.notice-ic{flex:0 0 44px;width:44px;height:44px;border-radius:50%;background:rgba(163,104,60,.15);
+  display:flex;align-items:center;justify-content:center;color:var(--terracotta)}
+.notice-ic svg{width:24px;height:24px}
+.notice-txt h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--forest);margin-bottom:4px}
+.notice-txt p{color:var(--ink);font-size:.98rem;line-height:1.6}
+@media(max-width:760px){
+  .notice{gap:14px;padding:24px 22px;border-radius:12px}
+  .notice-ic{flex:0 0 38px;width:38px;height:38px}
+  .notice-ic svg{width:20px;height:20px}
+  .notice-txt h3{font-size:1.35rem}
+  .notice-txt p{font-size:.88rem}
+}
+
 /* ---------- SCHEDULE ---------- */
 .sched-note{
   display:flex;align-items:center;gap:12px;max-width:680px;margin:0 auto 34px;
@@ -324,7 +344,7 @@ section{padding:64px 0}
       <div class="inc-card">
         <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21V10l9-6 9 6v11"/><path d="M9 21v-6h6v6"/></svg>
         <h3>Akomodimi</h3>
-        <p>Fjetja për tri ditë në natyrën e qetë të Brezovicës.</p>
+        <p>Fjetja në vila në natyrën e qetë të Brezovicës.</p>
       </div>
       <div class="inc-card">
         <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 3v8a3 3 0 003 3v7M7 3v6M10 3v6M17 3c-1.5 1-2 3-2 6s.5 5 2 6v3"/></svg>
@@ -345,6 +365,21 @@ section{padding:64px 0}
     <div class="price-banner">
       <div class="amt"><span>€</span>100</div>
       <p>për person — trajnimi, akomodimi, ushqimi dhe të gjitha aktivitetet të përfshira</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== IMPORTANT NOTICE ===== -->
+<section class="notice-sec">
+  <div class="wrap">
+    <div class="notice">
+      <div class="notice-ic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.6 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.6a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+      </div>
+      <div class="notice-txt">
+        <h3>Njoftim i rëndësishëm</h3>
+        <p>Akomodimi është në vila. Dhomat mund të jenë të përbashkëta, ndaj mund t'ju duhet të flini me pjesëmarrës të tjerë. Meshkujt dhe femrat janë të ndarë në vila të ndryshme.</p>
+      </div>
     </div>
   </div>
 </section>
