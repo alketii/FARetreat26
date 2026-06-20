@@ -172,6 +172,13 @@ section{padding:64px 0}
 .price-banner p{opacity:.85;margin-top:6px;letter-spacing:.04em}
 
 /* ---------- SCHEDULE ---------- */
+.sched-note{
+  display:flex;align-items:center;gap:12px;max-width:680px;margin:0 auto 34px;
+  background:rgba(182,138,78,.10);border:1px solid var(--line);border-left:4px solid var(--gold);
+  border-radius:12px;padding:14px 18px;color:var(--muted);font-size:.92rem;font-style:italic;
+}
+.sched-note svg{flex:0 0 22px;width:22px;height:22px;color:var(--gold)}
+@media(max-width:760px){.sched-note{font-size:.82rem;padding:12px 14px;margin-bottom:22px}}
 .day{margin-bottom:34px;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--cream);display:flex}
 .day-side{
   flex:0 0 210px;color:#f5f1e6;padding:34px 24px;text-align:center;
@@ -349,6 +356,11 @@ section{padding:64px 0}
       <span class="eyebrow">Programi 3-ditor</span>
       <h2>Programi</h2>
       <p>Vetëdije trupore · Vëzhgim funksional · Prani · Integrim</p>
+    </div>
+
+    <div class="sched-note">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+      <span>Programi është ende në përpunim e sipër. Ky është një version paraprak dhe mund të pësojë ndryshime.</span>
     </div>
 
     <!-- DAY 1 -->
