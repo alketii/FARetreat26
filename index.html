@@ -5,6 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Functional Analysis Retreat 2026 — Brezovicë, Kosovë</title>
 <meta name="description" content="Functional Analysis Retreat 2026 — 11, 12 & 13 korrik 2026, Brezovicë, Kosovë. Vetëdije trupore · Vëzhgim funksional · Prani · Integrim. Ligjërues: Migjen Amzai.">
+
+<!-- Open Graph / WhatsApp / Viber / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fa26.ket.al/">
+<meta property="og:title" content="Functional Analysis Retreat 2026 — Brezovicë, Kosovë">
+<meta property="og:description" content="11, 12 & 13 korrik 2026, Brezovicë, Kosovë. Trajnim, akomodim dhe ushqim të përfshira. Ligjërues: Migjen Amzai.">
+<meta property="og:image" content="https://fa26.ket.al/assets/ogimage.png">
+<meta property="og:image:width" content="1731">
+<meta property="og:image:height" content="909">
+<meta property="og:image:alt" content="Functional Analysis Retreat 2026">
+<meta property="og:locale" content="sq_AL">
+<meta property="og:site_name" content="FA Retreat 2026">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Functional Analysis Retreat 2026 — Brezovicë, Kosovë">
+<meta name="twitter:description" content="11, 12 & 13 korrik 2026, Brezovicë, Kosovë. Trajnim, akomodim dhe ushqim të përfshira.">
+<meta name="twitter:image" content="https://fa26.ket.al/assets/ogimage.png">
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="256x256" href="assets/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#1C3D2B">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -122,13 +145,7 @@ a{color:inherit}
 /* seconds box pulses each tick */
 #cd-s-box .num.pulse{animation:pulseNum 1s ease}
 @keyframes pulseNum{0%{transform:scale(1.22);color:var(--gold-soft)}100%{transform:scale(1);color:#fdf8ef}}
-/* slim progress bar (no number) */
-.cd-progress{max-width:520px;margin:34px auto 0}
-.cd-bar{height:6px;background:var(--cream-2);border:1px solid var(--line);border-radius:20px;overflow:hidden}
-.cd-bar span{display:block;height:100%;width:0;border-radius:20px;
-  background:linear-gradient(90deg,var(--olive),var(--gold-soft),var(--terracotta));
-  transition:width 1s linear}
-.cd-note{text-align:center;color:var(--muted);margin-top:18px;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:1.3rem}
+.cd-note{text-align:center;color:var(--muted);margin-top:26px;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:1.3rem}
 
 /* ---------- SECTION ---------- */
 section{padding:64px 0}
@@ -193,13 +210,24 @@ section{padding:64px 0}
 
 @media(max-width:760px){
   .inc-grid{grid-template-columns:1fr}
-  .day{flex-direction:column}
-  .day-side{flex:none;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:6px 18px;text-align:center;padding:22px}
-  .day-side .ic{display:none}
-  .day-side .dtheme{flex-basis:100%;border-top:none;padding-top:6px;margin-top:6px}
-  .slot{flex-direction:column;gap:4px;padding:16px 20px}
-  .slot .time{flex:none}
   .hero-leaf{display:none}
+
+  /* --- compact schedule (mobile only) --- */
+  .day{flex-direction:column;margin-bottom:20px;border-radius:14px}
+  .day-side{flex:none;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:center;gap:2px 12px;text-align:center;padding:12px 16px}
+  .day-side .ic{display:none}
+  .day-side .dlabel{font-size:1.15rem}
+  .day-side .ddate{font-size:1.5rem;margin:0}
+  .day-side .dday{font-size:.6rem;letter-spacing:.2em}
+  .day-side .dtheme{flex-basis:100%;border-top:none;padding-top:2px;margin-top:2px;font-size:.78rem;line-height:1.35;opacity:.9}
+
+  .slot{flex-direction:row;align-items:flex-start;gap:9px;padding:9px 13px}
+  .slot .time{flex:0 0 52px;font-size:.7rem;line-height:1.25;letter-spacing:0;padding-top:2px}
+  .slot .det h4{font-size:.98rem;line-height:1.18}
+  .slot .det p{font-size:.74rem;line-height:1.38;margin-top:1px}
+  .slot .det h4 .tagi{font-size:.55rem;margin-left:6px}
+  .slot .sic{flex:0 0 20px}
+  .slot .sic svg{width:19px;height:19px}
 }
 </style>
 </head>
@@ -229,7 +257,6 @@ section{padding:64px 0}
   <div class="wrap hero-inner">
     <img class="logo-mark" src="assets/falogo_transparent.png" alt="Functional Analysis logo">
     <h1>Functional Analysis Retreat 2026</h1>
-    <div class="fullname">FA RETREAT</div>
     <div class="sub">Brezovicë · Kosovë</div>
     <p class="tag">Vetëdije trupore, vëzhgim funksional, prani dhe integrim.</p>
 
@@ -263,9 +290,6 @@ section{padding:64px 0}
       <div class="cd-box"><span class="num" id="cd-h">–</span><div class="lbl">Orë</div></div>
       <div class="cd-box"><span class="num" id="cd-m">–</span><div class="lbl">Minuta</div></div>
       <div class="cd-box" id="cd-s-box"><span class="num" id="cd-s">–</span><div class="lbl">Sekonda</div></div>
-    </div>
-    <div class="cd-progress">
-      <div class="cd-bar"><span id="cd-fill"></span></div>
     </div>
     <p class="cd-note" id="cd-note">11 · 12 · 13 Korrik 2026 — Brezovicë, Kosovë</p>
   </div>
@@ -415,12 +439,8 @@ section{padding:64px 0}
 <script>
 (function(){
   var target=new Date("2026-07-11T10:00:00+02:00").getTime();
-  // start point for progress bar: 90 days before the event (or now, if closer)
-  var span=90*86400000;
-  var start=target-span;
   var d=document.getElementById('cd-d'),h=document.getElementById('cd-h'),
       m=document.getElementById('cd-m'),s=document.getElementById('cd-s'),
-      fill=document.getElementById('cd-fill'),
       note=document.getElementById('cd-note');
   function pad(n){return n<10?'0'+n:n}
   // update a digit and animate only when it actually changes
@@ -434,7 +454,6 @@ section{padding:64px 0}
     var now=Date.now(),diff=target-now;
     if(diff<=0){
       d.textContent='0';h.textContent='00';m.textContent='00';s.textContent='00';
-      fill.style.width='100%';
       note.textContent='Retreat-i ka filluar — mirë se vini!';
       clearInterval(t);return;
     }
@@ -443,8 +462,6 @@ section{padding:64px 0}
     var mm=Math.floor(diff%3600000/60000);
     var ss=Math.floor(diff%60000/1000);
     set(d,dd,'flip');set(h,pad(hh),'flip');set(m,pad(mm),'flip');set(s,pad(ss),'pulse');
-    var p=Math.max(0,Math.min(100,((now-start)/span)*100));
-    fill.style.width=p.toFixed(2)+'%';
   }
   tick();var t=setInterval(tick,1000);
 })();
