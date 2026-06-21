@@ -240,6 +240,18 @@ section{padding:64px 0}
 .slot .sic svg{width:30px;height:30px}
 .slot.meal{background:rgba(182,138,78,.10)}
 .slot.meal .sic{color:var(--terracotta)}
+/* end-of-training separator */
+.day-sep{display:flex;align-items:center;gap:14px;padding:12px 26px;border-bottom:1px solid var(--line);
+  background:repeating-linear-gradient(135deg,rgba(96,104,72,.05),rgba(96,104,72,.05) 10px,transparent 10px,transparent 20px)}
+.day-sep .l{flex:1;height:1px;background:var(--line)}
+.day-sep .lbl{display:flex;align-items:center;gap:8px;white-space:nowrap;
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:var(--olive)}
+.day-sep .lbl svg{width:18px;height:18px;flex:0 0 18px}
+@media(max-width:760px){
+  .day-sep{padding:10px 16px;gap:10px}
+  .day-sep .lbl{font-size:.92rem}
+}
+
 /* distinct evening box */
 .slot.evening{background:rgba(96,104,72,.13)}
 .slot.evening .det h4{color:var(--olive)}
@@ -252,6 +264,7 @@ section{padding:64px 0}
 .subslots .meta{display:contents}
 .subslots .st{flex:0 0 104px;font-weight:700;color:var(--forest);font-size:.8rem;letter-spacing:.01em}
 .subslots .sl{flex:1;min-width:0}
+.subslots .ptag{color:var(--terracotta);font-weight:700;margin-right:4px}
 @media(max-width:760px){
   .subslots{gap:11px}
   .subslots li{align-items:flex-start;gap:9px;font-size:.84rem}
@@ -451,11 +464,12 @@ section{padding:64px 0}
         <div class="slot meal"><div class="time">15:30 – 15:45</div><div class="det"><h4>Pushim</h4></div><div class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h12v5a4 4 0 01-4 4H8a4 4 0 01-4-4V8z"/><path d="M16 9h2.5a2.5 2.5 0 010 5H16"/><path d="M7 3v2.5M10 3v2.5M13 3v2.5"/></svg></div></div>
         <div class="slot"><div class="time">15:45 – 17:00</div><div class="det"><h4>Intervistë somatike</h4><p>Fokus në përvojën e tanishme pa kërkuar histori personale, çfarë po vëren në trup tani, ku e ndien më gartë, a ndryshon ndjesia kur i kushton vëmendje, çfarë impulsi ose prirjeje të vogël po vëren, çfarë të ndihmon të qëndrosh i/e pranishme.</p></div><div class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H8l-4 4V5z"/><path d="M8 10h8M8 13h5"/></svg></div></div>
         <div class="slot"><div class="time">17:00 – 18:00</div><div class="det"><h4>Integrim dhe reflektim në grup</h4><p>Ndarje vullnetare e përvojës, reflektim mbi procesin e ditës, mbyllje dhe rregullim.</p></div><div class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.2"/><path d="M3 19c0-3 3-5 6-5s6 2 6 5M15 19c0-2 1-3.4 3-3.4"/></svg></div></div>
+        <div class="day-sep"><span class="l"></span><span class="lbl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 18a5 5 0 00-10 0M12 2v7M9 6l3 3 3-3M3 18h18M5 22h14"/></svg>Trajnimi përfundon për sot — vijojnë aktivitetet e lira</span><span class="l"></span></div>
         <div class="slot evening"><div class="time">18:00 – 23:00</div><div class="det"><h4>Darkë dhe aktivitete</h4>
           <ul class="subslots">
             <li><span class="sub-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v6a2 2 0 002 2v10M7 3v6M9 3v6M9 8V3M17 3c-1.5 1.2-2 3.6-2 6 0 1.9.8 3.1 2 3.6V21"/></svg></span><div class="meta"><span class="st">18:00 – 19:30</span><span class="sl">Darka</span></div></li>
-            <li><span class="sub-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="5"/><path d="M5 12h3M6.5 10.5v3"/><circle cx="16" cy="11" r=".7" fill="currentColor" stroke="none"/><circle cx="18.5" cy="13" r=".7" fill="currentColor" stroke="none"/></svg></span><div class="meta"><span class="st">19:30 – 21:00</span><span class="sl">Nintendo Switch Sports — Bowling Competition</span></div></li>
-            <li><span class="sub-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M10 9l5 3-5 3z"/><path d="M8 21h8"/></svg></span><div class="meta"><span class="st">21:00 – 22:30</span><span class="sl">The Life and Trials of Wilhelm Reich</span></div></li>
+            <li><span class="sub-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="5"/><path d="M5 12h3M6.5 10.5v3"/><circle cx="16" cy="11" r=".7" fill="currentColor" stroke="none"/><circle cx="18.5" cy="13" r=".7" fill="currentColor" stroke="none"/></svg></span><div class="meta"><span class="st">19:30 – 21:00</span><span class="sl"><span class="ptag">Game:</span>Nintendo Switch Sports — Bowling Competition</span></div></li>
+            <li><span class="sub-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M10 9l5 3-5 3z"/><path d="M8 21h8"/></svg></span><div class="meta"><span class="st">21:00 – 22:30</span><span class="sl"><span class="ptag">Movie:</span>The Life and Trials of Wilhelm Reich</span></div></li>
             <li><span class="sub-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14a8 8 0 01-10-10 8 8 0 1010 10z"/></svg></span><div class="meta"><span class="st">22:30 – 23:00</span><span class="sl">Përfundimi</span></div></li>
           </ul>
         </div><div class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14a8 8 0 01-10-10 8 8 0 1010 10z"/><path d="M18 3.5l.5 1.5 1.5.5-1.5.5L18 7.5l-.5-1.5L16 5.5l1.5-.5z"/></svg></div></div>
@@ -478,11 +492,12 @@ section{padding:64px 0}
         <div class="slot"><div class="time">14:00 – 15:30</div><div class="det"><h4>Ndjekja e procesit (tracking)</h4><p>Si ndiqet përvoja moment pas momenti, ndjesia, emocioni, impulsi, kuptimi.</p></div><div class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div></div>
         <div class="slot meal"><div class="time">15:30 – 15:45</div><div class="det"><h4>Pushim</h4></div><div class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h12v5a4 4 0 01-4 4H8a4 4 0 01-4-4V8z"/><path d="M16 9h2.5a2.5 2.5 0 010 5H16"/><path d="M7 3v2.5M10 3v2.5M13 3v2.5"/></svg></div></div>
         <div class="slot"><div class="time">15:45 – 18:00</div><div class="det"><h4>Triada e praktikës</h4><p>Udhëheqës, pjesëmarrës, vëzhgues, praktikë me feedback të strukturuar, çfarë u vëzhgua, çfarë u ndje në trup, çfarë e mbështeti procesin, çfarë mund të bëhej më ngadalë ose më qartë.</p></div><div class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.2"/><path d="M3 19c0-3 3-5 6-5s6 2 6 5M15 19c0-2 1-3.4 3-3.4"/></svg></div></div>
+        <div class="day-sep"><span class="l"></span><span class="lbl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 18a5 5 0 00-10 0M12 2v7M9 6l3 3 3-3M3 18h18M5 22h14"/></svg>Trajnimi përfundon për sot — vijojnë aktivitetet e lira</span><span class="l"></span></div>
         <div class="slot evening"><div class="time">18:00 – 23:00</div><div class="det"><h4>Darkë dhe aktivitete</h4>
           <ul class="subslots">
             <li><span class="sub-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v6a2 2 0 002 2v10M7 3v6M9 3v6M9 8V3M17 3c-1.5 1.2-2 3.6-2 6 0 1.9.8 3.1 2 3.6V21"/></svg></span><div class="meta"><span class="st">18:00 – 19:30</span><span class="sl">Darka</span></div></li>
-            <li><span class="sub-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M12 16v4M8 20h8M7 12l3-3 2 2 4-4"/></svg></span><div class="meta"><span class="st">19:30 – 20:30</span><span class="sl">Prezantim: Alket Rexhepi — Functional Analysis in a Nutshell</span></div></li>
-            <li><span class="sub-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.2a2.5 2.5 0 014.6 1.3c0 1.7-2.1 2-2.1 3.5"/><path d="M12 17h.01"/></svg></span><div class="meta"><span class="st">20:30 – 22:30</span><span class="sl">Kuizi Interaktiv</span></div></li>
+            <li><span class="sub-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M12 16v4M8 20h8M7 12l3-3 2 2 4-4"/></svg></span><div class="meta"><span class="st">19:30 – 20:30</span><span class="sl"><span class="ptag">Prezantim:</span>Alket Rexhepi — Functional Analysis in a Nutshell</span></div></li>
+            <li><span class="sub-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.2a2.5 2.5 0 014.6 1.3c0 1.7-2.1 2-2.1 3.5"/><path d="M12 17h.01"/></svg></span><div class="meta"><span class="st">20:30 – 22:30</span><span class="sl"><span class="ptag">Game:</span>Kuizi Interaktiv</span></div></li>
             <li><span class="sub-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14a8 8 0 01-10-10 8 8 0 1010 10z"/></svg></span><div class="meta"><span class="st">22:30 – 23:00</span><span class="sl">Përfundimi</span></div></li>
           </ul>
         </div><div class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14a8 8 0 01-10-10 8 8 0 1010 10z"/><path d="M18 3.5l.5 1.5 1.5.5-1.5.5L18 7.5l-.5-1.5L16 5.5l1.5-.5z"/></svg></div></div>
