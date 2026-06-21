@@ -169,7 +169,14 @@ section{padding:64px 0}
 }
 .price-banner .amt{font-family:'Jost',sans-serif;font-size:3.4rem;font-weight:600;letter-spacing:.02em;line-height:1}
 .price-banner .amt span{font-size:1.5rem;font-weight:400;vertical-align:super;margin-right:2px}
-.price-banner p{opacity:.85;margin-top:6px;letter-spacing:.04em}
+.price-banner .price-label{opacity:.9;margin-top:6px;letter-spacing:.08em;text-transform:uppercase;font-size:.8rem}
+.price-opt{margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.2)}
+.price-opt .opt-head{opacity:.85;font-size:.95rem;font-style:italic;max-width:480px;margin:0 auto 14px}
+.price-opt ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;align-items:center}
+.price-opt li{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:30px;
+  padding:9px 20px;font-size:1rem;display:flex;align-items:center;gap:10px;min-width:240px;justify-content:center}
+.price-opt .opt-tag{background:var(--gold);color:#fdf8ef;font-size:.62rem;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;padding:3px 9px;border-radius:20px}
 
 /* ---------- GALLERY ---------- */
 .gallery-sec{background:var(--cream-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -414,7 +421,10 @@ section{padding:64px 0}
     </div>
     <div class="price-banner">
       <div class="amt"><span>€</span>100</div>
-      <p>për person — trajnimi, akomodimi, ushqimi dhe të gjitha aktivitetet të përfshira</p>
+      <div class="price-label">Trajnimi · për person</div>
+      <div class="price-opt">
+        <p class="opt-head">Akomodimi dhe ushqimi janë opsionale — vetëm për ata që dëshirojnë dhe me vende të kufizuara.</p>
+      </div>
     </div>
   </div>
 </section>
