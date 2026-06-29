@@ -329,9 +329,11 @@
         box-shadow: 0 24px 44px -20px rgba(28, 61, 43, 0.85);
       }
       .cd-box .num {
-        font-family: "Cormorant Garamond", serif;
-        font-size: 3.4rem;
-        font-weight: 700;
+        font-family: "Jost", sans-serif;
+        font-size: 3rem;
+        font-weight: 500;
+        font-variant-numeric: tabular-nums;
+        letter-spacing: 0.01em;
         color: #fdf8ef;
         line-height: 1;
         display: block;
@@ -1076,6 +1078,60 @@
           height: 19px;
         }
       }
+
+/* ===================== PRINT / SAVE AS PDF ===================== */
+@media print{
+  @page{size:A4;margin:10mm 0}
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  html,body{background:#fff}
+  /* top breathing room on each page even if printed with margins: none */
+  .hero{padding-top:10mm!important}
+  .day-2,.day-3{padding-top:12mm!important}
+  .inc-grid{page-break-inside:avoid}
+  a{text-decoration:none!important;color:inherit!important}
+
+  /* hide things that don't belong in a PDF */
+  .countdown{display:none!important}
+  .gallery-grid video,.gallery-grid .vbadge{display:none!important}
+  .hero-leaf{display:none!important}
+  .cta{display:none!important}
+
+  /* tighter section spacing for paper */
+  section{padding:9mm 0!important}
+  .hero{border-bottom:none}
+  .hero-inner{padding:4mm 0 8mm!important}
+  .section-head{margin-bottom:6mm!important}
+
+  /* compact offer cards on paper — uniform grid of 3 */
+  .inc-grid{grid-template-columns:repeat(3,1fr)!important;gap:5mm!important;align-items:stretch}
+  .inc-card{padding:5mm 4mm!important}
+  .inc-card .ic{width:30px!important;height:30px!important;margin-bottom:6px!important}
+  .inc-card h3{font-size:1.15rem!important;margin-bottom:2px!important}
+  .inc-card p{font-size:.76rem!important;line-height:1.35!important}
+  .price-banner{margin-top:6mm!important;padding:5mm!important}
+  .price-banner .amt{font-size:2.4rem!important}
+
+  /* keep blocks from being cut across pages */
+  .inc-card,.notice,.price-banner,.gallery-grid figure,.slot,.day-sep{page-break-inside:avoid}
+  .day-sep{page-break-after:avoid}
+  .section-head{page-break-after:avoid}
+
+  /* schedule: stack each day as a banner + rows, like the mobile layout */
+  #programi{page-break-before:always}
+  .day{display:block;page-break-inside:auto;margin-bottom:6mm;box-shadow:none}
+  .day-2,.day-3{page-break-before:always}
+  .day-side{flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:center;gap:3px 16px;padding:8px 16px;text-align:center}
+  .day-side .ic{display:none}
+  .day-side .ddate{font-size:1.7rem;margin:0}
+  .day-side .dtheme{flex-basis:100%;border-top:none;margin:2px 0 0;padding:0}
+
+  /* gallery starts fresh, prints as a photo grid */
+  .gallery-sec{page-break-before:always}
+  .gallery-grid{column-count:2}
+
+  /* footer registration block tidy */
+  .contact{padding:12mm 0!important}
+}
     </style>
   </head>
   <body>
